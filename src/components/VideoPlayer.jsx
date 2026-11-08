@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Play, Pause, Volume2, VolumeX, Maximize } from 'lucide-react'
+import { asset } from '../data/site'
 
 /**
  * Lecteur vidéo local avec miniature (poster) et commandes accessibles.
@@ -80,8 +81,8 @@ export default function VideoPlayer({ video, autoPlay = false, className = '' })
       <video
         ref={videoRef}
         className="vplayer__video"
-        src={video.src}
-        poster={video.poster}
+        src={asset(video.src)}
+        poster={asset(video.poster)}
         preload="none"
         playsInline
         loop

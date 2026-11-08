@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Leaf, ShieldCheck, MapPin } from 'lucide-react'
-import { company } from '../data/site'
+import { company, asset } from '../data/site'
 
 export default function Hero() {
   return (
@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="container hero__inner">
         <div className="hero__content">
           <div className="hero__brand">
-            <img src="/images/logo-france-shgrace.png" alt="France shGrace" width="315" height="148" />
+            <img src={asset('/images/logo-france-shgrace.png')} alt="France shGrace" width="315" height="148" />
             <span>
               représentée en Côte d'Ivoire par <strong>{company.name}</strong>
             </span>
@@ -51,14 +51,14 @@ export default function Hero() {
         <div className="hero__visual">
           <div className="hero__lifestyle">
             <img
-              src="/images/hero-lifestyle.webp"
+              src={asset('/images/hero-lifestyle.webp')}
               alt="Une main tient un flacon Omega-7 France shGrace"
               width="1024"
               height="576"
             />
           </div>
-          <img className="hero__bottle hero__bottle--1" src="/images/products/probiotic-15-billion.webp" alt="Probiotic 15 Billion France shGrace" width="900" height="900" />
-          <img className="hero__bottle hero__bottle--2" src="/images/products/lutein.webp" alt="Lutein 20 mg France shGrace" width="900" height="900" />
+          <img className="hero__bottle hero__bottle--1" src={asset('/images/products/probiotic-15-billion.webp')} alt="Probiotic 15 Billion France shGrace" width="900" height="900" />
+          <img className="hero__bottle hero__bottle--2" src={asset('/images/products/lutein.webp')} alt="Lutein 20 mg France shGrace" width="900" height="900" />
           <div className="hero__badge">
             <Leaf size={20} aria-hidden="true" />
             <span>

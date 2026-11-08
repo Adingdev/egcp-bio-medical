@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Menu, X, MessageCircle } from 'lucide-react'
-import { navLinks, whatsappLink } from '../data/site'
+import { navLinks, whatsappLink, asset } from '../data/site'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -35,7 +35,7 @@ export default function Navbar() {
       <div className="container navbar__inner">
         <Link to="/" className="navbar__logos" aria-label="EGCP bio-médical — accueil">
           <img
-            src="/images/logo-egcp.png"
+            src={asset('/images/logo-egcp.png')}
             alt="EGCP bio-médical"
             className="navbar__logo navbar__logo--egcp"
             width="350"
@@ -43,7 +43,7 @@ export default function Navbar() {
           />
           <span className="navbar__divider" aria-hidden="true" />
           <img
-            src="/images/logo-france-shgrace.png"
+            src={asset('/images/logo-france-shgrace.png')}
             alt="France shGrace"
             className="navbar__logo navbar__logo--brand"
             width="315"

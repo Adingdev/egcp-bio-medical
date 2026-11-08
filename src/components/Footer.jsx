@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Phone, Mail, MapPin } from 'lucide-react'
-import { company, navLinks, phoneHref, mapsLink } from '../data/site'
+import { company, navLinks, phoneHref, mapsLink, asset } from '../data/site'
 import { disclaimer } from '../data/content'
 import SocialLinks from './SocialLinks'
 
@@ -10,8 +10,8 @@ export default function Footer() {
       <div className="container footer__grid">
         <div className="footer__about">
           <div className="footer__logos">
-            <img src="/images/logo-egcp.png" alt="EGCP bio-médical" loading="lazy" width="350" height="210" />
-            <img src="/images/logo-france-shgrace.png" alt="France shGrace" loading="lazy" width="315" height="148" />
+            <img src={asset('/images/logo-egcp.png')} alt="EGCP bio-médical" loading="lazy" width="350" height="210" />
+            <img src={asset('/images/logo-france-shgrace.png')} alt="France shGrace" loading="lazy" width="315" height="148" />
           </div>
           <p>
             {company.name}, représentant en Côte d'Ivoire de la marque France shGrace pour la commercialisation de

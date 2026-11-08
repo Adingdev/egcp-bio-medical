@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// Si le site est publié dans un sous-dossier (ex. GitHub Pages), changez `base`.
-export default defineConfig({
-  base: '/',
+// Configuration pour GitHub Pages (dépôt : Adingdev/egcp-bio-medical)
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/egcp-bio-medical/' : '/',
   plugins: [react()],
-})
+}))

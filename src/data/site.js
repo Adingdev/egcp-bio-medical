@@ -13,6 +13,16 @@ export const company = {
   whatsapp: '225798429183',
 }
 
+// Résout les chemins statiques (images, vidéos) avec le base path Vite (ex: /egcp-bio-medical/ sur GitHub Pages)
+export const asset = (path) => {
+  if (!path) return path
+  if (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('data:')) return path
+  const base = import.meta.env.BASE_URL || '/'
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path
+  const cleanBase = base.endsWith('/') ? base : `${base}/`
+  return `${cleanBase}${cleanPath}`
+}
+
 export const phoneHref = (p) => `tel:+225${p.replace(/\s/g, '')}`
 
 export const whatsappLink = (message = 'Bonjour EGCP bio-médical, je souhaite avoir des informations sur vos produits.') =>

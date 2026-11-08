@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { CheckCircle2, MessageCircle } from 'lucide-react'
 import { aboutPoints } from '../data/content'
-import { company, whatsappLink } from '../data/site'
+import { company, whatsappLink, asset } from '../data/site'
 import Reveal from './Reveal'
 
 // `detailed` : version longue pour la page À propos
@@ -12,7 +12,7 @@ export default function AboutSection({ detailed = false }) {
         <Reveal className="about__visual">
           <div className="about__frame">
             <img
-              src="/images/posters/omega-7.webp"
+              src={asset('/images/posters/omega-7.webp')}
               alt="Flacons Omega-7 France shGrace présentés en studio"
               loading="lazy"
               decoding="async"
@@ -21,8 +21,8 @@ export default function AboutSection({ detailed = false }) {
             />
           </div>
           <div className="about__logos">
-            <img src="/images/logo-egcp.png" alt="EGCP bio-médical" loading="lazy" width="350" height="210" />
-            <img src="/images/logo-france-shgrace.png" alt="France shGrace" loading="lazy" width="315" height="148" />
+            <img src={asset('/images/logo-egcp.png')} alt="EGCP bio-médical" loading="lazy" width="350" height="210" />
+            <img src={asset('/images/logo-france-shgrace.png')} alt="France shGrace" loading="lazy" width="315" height="148" />
           </div>
         </Reveal>
 

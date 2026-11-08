@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Play, ArrowRight } from 'lucide-react'
 import { videos } from '../data/videos'
+import { asset } from '../data/site'
 import VideoPlayer from './VideoPlayer'
 import SectionHeading from './SectionHeading'
 import Reveal from './Reveal'
@@ -24,7 +25,7 @@ export default function VideoShowcase() {
 
         <Reveal className="video-section__layout">
           <div className="video-section__stage">
-            <div className="video-section__stage-bg" style={{ backgroundImage: `url(${active.poster})` }} aria-hidden="true" />
+            <div className="video-section__stage-bg" style={{ backgroundImage: `url(${asset(active.poster)})` }} aria-hidden="true" />
             <VideoPlayer key={active.id} video={active} autoPlay />
             <div className="video-section__now">
               <strong>{active.title}</strong>
@@ -43,7 +44,7 @@ export default function VideoShowcase() {
                     aria-pressed={v.id === active.id}
                   >
                     <span className="video-thumb__img">
-                      <img src={v.poster} alt="" loading="lazy" decoding="async" />
+                      <img src={asset(v.poster)} alt="" loading="lazy" decoding="async" />
                       <span className="video-thumb__play" aria-hidden="true">
                         <Play size={14} fill="currentColor" />
                       </span>
