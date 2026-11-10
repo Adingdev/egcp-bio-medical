@@ -5,12 +5,12 @@ export const company = {
   nameUpper: 'EGCP BIO-MÉDICAL',
   brand: 'France shGrace',
   tagline: 'Votre bien-être, notre priorité',
-  phone: '07 98 42 91 83',
-  phone2: '05 65 71 72 03',
+  phone: '+225 07 98 42 91 83',
+  phone2: '+225 05 65 71 72 03',
   email: 'produitbioegcp@gmail.com',
   address: 'Abidjan-Treichville, Avenue 21 rue 38',
   // Format international exigé par WhatsApp (sans + ni espaces)
-  whatsapp: '225798429183',
+  whatsapp: '2250798429183',
 }
 
 // Résout les chemins statiques (images, vidéos) avec le base path Vite (ex: /egcp-bio-medical/ sur GitHub Pages)

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Menu, X, MessageCircle } from 'lucide-react'
 import { navLinks, whatsappLink, asset } from '../data/site'
+import ThemeToggle from './ThemeToggle'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -65,6 +66,7 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
+          <ThemeToggle className="navbar__theme-desktop" />
           <a
             className="btn btn--whatsapp navbar__cta"
             href={whatsappLink()}
@@ -76,16 +78,19 @@ export default function Navbar() {
           </a>
         </nav>
 
-        <button
-          type="button"
-          className="navbar__toggle"
-          aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
-          aria-expanded={open}
-          aria-controls="main-menu"
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <X size={26} /> : <Menu size={26} />}
-        </button>
+        <div className="navbar__actions">
+          <ThemeToggle className="navbar__theme-mobile" />
+          <button
+            type="button"
+            className="navbar__toggle"
+            aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
+            aria-expanded={open}
+            aria-controls="main-menu"
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X size={26} /> : <Menu size={26} />}
+          </button>
+        </div>
       </div>
       {open && <div className="navbar__backdrop" onClick={() => setOpen(false)} aria-hidden="true" />}
     </header>

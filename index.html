@@ -18,6 +18,16 @@
     />
     <meta property="og:image" content="./images/hero-lifestyle.webp" />
     <link rel="icon" type="image/png" href="./images/logo-egcp.png" />
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('egcp_theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = saved || (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {}
+      })();
+    </script>
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
       (function(l) {

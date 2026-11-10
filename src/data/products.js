@@ -33,7 +33,7 @@ export const products = [
     description:
       "Ocuvite Eye Vitamins & Mineral 50+ est un complément alimentaire de la gamme France shGrace destiné aux adultes de 50 ans et plus. Il s'inscrit dans une routine de bien-être axée sur le confort visuel.",
     labelInfo: ['Formule « Adult 50+ »', 'Complément alimentaire', 'Marque France shGrace'],
-    image: null,
+    image: '/images/products/probiotic-15-billion.webp',
     imageFit: 'contain',
     video: null,
     featured: true,
@@ -92,7 +92,7 @@ export const products = [
     description:
       "Prostate Support est un complément alimentaire de la gamme France shGrace, présenté dans la catégorie santé masculine avec la mention « Saw Palmetto Enhanced ».",
     labelInfo: ['Mention « Saw Palmetto Enhanced »', 'Flacon de 60 capsules', 'Marque France shGrace'],
-    image: null,
+    image: '/images/products/prostate.jpeg',
     imageFit: 'contain',
     video: null,
     featured: true,
@@ -105,7 +105,7 @@ export const products = [
     description:
       "Liver est un complément alimentaire de la gamme France shGrace. Pour connaître sa présentation exacte, sa composition et son mode d'emploi, reportez-vous à l'emballage ou contactez-nous.",
     labelInfo: ['Complément alimentaire', 'Marque France shGrace'],
-    image: null,
+    image: '/images/products/lliver.jpeg',
     imageFit: 'contain',
     video: null,
     featured: true,
